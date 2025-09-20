@@ -77,7 +77,7 @@
 
                                         <!--// Titel //-->
                                         <Viewbox  Margin="0" Grid.Column="1">
-                                            <TextBlock Style="{StaticResource HeaderText}" Foreground="White"  Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title }"/>
+                                            <TextBlock Style="{StaticResource HeaderText}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}"  Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title }"/>
                                         </Viewbox>
 
                                         <!--// Window Buttons //-->
@@ -120,6 +120,12 @@
 
 
     <Grid Background="{StaticResource DarkThemeBackgroundBrush-a20}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ContentControl Grid.Row="1" Content="{Binding Navigator.CurrentViewModel}"/>
 
     </Grid>
 </Window>

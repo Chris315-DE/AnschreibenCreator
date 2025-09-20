@@ -82,7 +82,7 @@ namespace AnschreibenCreator.WPF.ViewModel
         public ShellViewModel(Window window)
         {
             Navigator = NavigationManager.Instance;
-
+            Navigator.CurrentViewModel  = BriefKopfViewModel.Instance;
            
 
             UpdateCommand = new(Navigator);

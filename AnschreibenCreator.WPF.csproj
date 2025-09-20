@@ -9,14 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AnschreibenCreator.Lib\**" />
     <Compile Remove="CkWPF.MvvmBase\**" />
+    <EmbeddedResource Remove="AnschreibenCreator.Lib\**" />
     <EmbeddedResource Remove="CkWPF.MvvmBase\**" />
+    <None Remove="AnschreibenCreator.Lib\**" />
     <None Remove="CkWPF.MvvmBase\**" />
+    <Page Remove="AnschreibenCreator.Lib\**" />
     <Page Remove="CkWPF.MvvmBase\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AnschreibenCreator.Lib\AnschreibenCreator.Lib.csproj" />
     <ProjectReference Include="CkWPF.MvvmBase\CkWPF.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
