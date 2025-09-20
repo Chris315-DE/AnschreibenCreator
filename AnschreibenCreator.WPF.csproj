@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CkWPF.MvvmBase\**" />
+    <EmbeddedResource Remove="CkWPF.MvvmBase\**" />
+    <None Remove="CkWPF.MvvmBase\**" />
+    <Page Remove="CkWPF.MvvmBase\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="CkWPF.MvvmBase\CkWPF.MvvmBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
+</Project>
