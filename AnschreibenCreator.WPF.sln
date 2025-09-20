@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36408.4 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnschreibenCreator.WPF", "AnschreibenCreator.WPF.csproj", "{B9875622-D35E-4DF0-B252-0D3544B1FAD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CkWPF.MvvmBase", "CkWPF.MvvmBase\CkWPF.MvvmBase.csproj", "{9C28A877-AA1A-4A46-BC5B-1C8F0A4F8243}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CkWPF.Base", "CkWPF.MvvmBase\CkWPF.Base.csproj", "{9C28A877-AA1A-4A46-BC5B-1C8F0A4F8243}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -16,11 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="CkWPF.MvvmBase\CkWPF.MvvmBase.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Contracts\" />
+    <ProjectReference Include="CkWPF.MvvmBase\CkWPF.Base.csproj" />
   </ItemGroup>
 
 </Project>

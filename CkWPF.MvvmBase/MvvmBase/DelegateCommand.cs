@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace CkWPF.MvvmBase
+namespace CkWPF.Base.MvvmBase
 {
     public class DelegateCommand : ICommand
     {
@@ -18,12 +18,12 @@ namespace CkWPF.MvvmBase
 
         public DelegateCommand(Action<object> execute):this(null,execute) { }
 
-        public void RaisCanExecuteChanged() => this.CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        public void RaisCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 
 
-        public bool CanExecute(object? parameter) => this.canExecute?.Invoke(parameter) ?? true;
+        public bool CanExecute(object? parameter) => canExecute?.Invoke(parameter) ?? true;
         
-        public void Execute(object? parameter) => this.execute?.Invoke(parameter);
+        public void Execute(object? parameter) => execute?.Invoke(parameter);
 
        
     }

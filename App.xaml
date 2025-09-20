@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:AnschreibenCreator.WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/CkWPF.Base;component/Styles/Common.xaml"/>
+                <ResourceDictionary Source="/CkWPF.Base;component/Styles/CKNavButton.xaml"/>
+                <ResourceDictionary Source="/CkWPF.Base;component/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/CkWPF.Base;component/Styles/CKTextBoxStyle.xaml"/>
+                <ResourceDictionary Source="/CkWPF.Base;component/Styles/CKTextBlockStyle.xaml"/>
+     
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
     </Application.Resources>
 </Application>

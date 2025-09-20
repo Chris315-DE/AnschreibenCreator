@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace CkWPF.MvvmBase
+namespace CkWPF.Base.MvvmBase
 {
     public abstract class BaseViewModel : INotifyPropertyChanged
     {
@@ -50,7 +50,7 @@ namespace CkWPF.MvvmBase
         {
             if (!string.IsNullOrEmpty(propertyName))
             {
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
