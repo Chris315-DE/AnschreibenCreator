@@ -9,6 +9,39 @@
 
 
 
+    <Color x:Key="DarkThemeBackground-a10">#121212</Color>
+    <Color x:Key="DarkThemeBackground-a20">#282828</Color>
+    <Color x:Key="DarkThemeBackground-a30">#3f3f3f</Color>
+    <Color x:Key="DarkThemeBackground-a40">#575757</Color>
+    <Color x:Key="DarkThemeBackground-a50">#717171</Color>
+    <Color x:Key="DarkThemeBackground-a60">#8b8b8b</Color>
+
+    <Color x:Key="DarKThemeGUIElement-a10">#8414ef</Color>
+    <Color x:Key="DarKThemeGUIElement-a20">#963bf2</Color>
+    <Color x:Key="DarKThemeGUIElement-a30">#a757f4</Color>
+    <Color x:Key="DarKThemeGUIElement-a40">#b670f7</Color>
+    <Color x:Key="DarKThemeGUIElement-a50">#c488f9</Color>
+    <Color x:Key="DarKThemeGUIElement-a60">#d1a0fb</Color>
+
+
+
+
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush-a10" Color="{StaticResource DarkThemeBackground-a10}"/>
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush-a20" Color="{StaticResource DarkThemeBackground-a20}"/>
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush-a30" Color="{StaticResource DarkThemeBackground-a30}"/>
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush-a40" Color="{StaticResource DarkThemeBackground-a40}"/>
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush-a50" Color="{StaticResource DarkThemeBackground-a50}"/>
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush-a60" Color="{StaticResource DarkThemeBackground-a60}"/>
+
+    <SolidColorBrush x:Key="DarKThemeGUIElementBrush-a10" Color="{StaticResource DarKThemeGUIElement-a10}"/>
+    <SolidColorBrush x:Key="DarKThemeGUIElementBrush-a20" Color="{StaticResource DarKThemeGUIElement-a20}"/>
+    <SolidColorBrush x:Key="DarKThemeGUIElementBrush-a30" Color="{StaticResource DarKThemeGUIElement-a30}"/>
+    <SolidColorBrush x:Key="DarKThemeGUIElementBrush-a40" Color="{StaticResource DarKThemeGUIElement-a40}"/>
+    <SolidColorBrush x:Key="DarKThemeGUIElementBrush-a50" Color="{StaticResource DarKThemeGUIElement-a50}"/>
+    <SolidColorBrush x:Key="DarKThemeGUIElementBrush-a60" Color="{StaticResource DarKThemeGUIElement-a60}"/>
+
+
+
 
     <Color x:Key="ForegroundMain">#bed5ff</Color>
     <SolidColorBrush x:Key="ForegroundMainBrush" Color="{StaticResource ForegroundMain}"></SolidColorBrush>
