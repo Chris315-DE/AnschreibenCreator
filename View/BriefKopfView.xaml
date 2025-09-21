@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="AnschreibenCreator.WPF.View.BriefKopfView"
+﻿<UserControl x:Class="AnschreibenCreator.Lib.View.BriefKopfView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:AnschreibenCreator.WPF.View"
+             xmlns:local="clr-namespace:AnschreibenCreator.Lib.View"
              mc:Ignorable="d" 
              d:Background="{StaticResource DarkThemeBackgroundBrush-a10}"
              d:DesignHeight="800" d:DesignWidth="1200">
@@ -46,22 +46,26 @@
             </Grid>
 
 
-            <ListView ItemsSource="{Binding AnschriftenListe}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <ListView SelectedItem="{Binding SelectedModel}" BorderThickness="0" Background="{StaticResource DarkThemeBackgroundBrush-a20}" ItemsSource="{Binding AnschriftenListe}" Grid.Column="0" Grid.Row="1" >
 
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Label Content="{Binding FirmenName, FallbackValue=DemoFirma}"/>
-
+                        <StackPanel Orientation="Horizontal">
+                            <Label FontSize="20" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Content="{Binding FirmenName, FallbackValue=DemoFirma}"/>
+                            
+                            
+                        </StackPanel>
                     </DataTemplate>
+
                 </ListBox.ItemTemplate>
 
-                
-                
+
+
             </ListView>
-            
-            
+
+
         </Grid>
-        
-        
+
+
     </Grid>
 </UserControl>

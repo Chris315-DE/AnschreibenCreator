@@ -1,4 +1,4 @@
-﻿namespace AnschreibenCreator.WPF.Contracts
+﻿namespace AnschreibenCreator.Lib.Contracts
 {
     public interface IAnschreibenTemplate<T> : IEquatable<T> where T : class
     {

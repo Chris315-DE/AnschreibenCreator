@@ -1,4 +1,4 @@
-﻿using AnschreibenCreator.WPF.Contracts;
+﻿using AnschreibenCreator.Lib.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace AnschreibenCreator.WPF.Commands
+namespace AnschreibenCreator.Lib.Commands
 {
     public class UpdateCurrentViewModelCommand : ICommand
     {

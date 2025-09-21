@@ -1,5 +1,5 @@
 ﻿using AnschreibenCreator.Lib.Models;
-
+using AnschreibenCreator.Lib.Service;
 using CkWPF.Base.MvvmBase;
 using Microsoft.Win32;
 using System;
@@ -9,19 +9,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnschreibenCreator.WPF.ViewModel
+
+namespace AnschreibenCreator.Lib.ViewModel
 {
     public class BriefKopfViewModel : BaseViewModel
     {
         private BriefKopfViewModel()
         {
-            LoadFileCommand = new(o => LoadFile());
-
-
-
-
-
+            LoadFileCommand = new(o =>
+            {
+                LoadFile();
+                if (!string.IsNullOrEmpty(FilePath))
+                {
+                    AnschriftLoader loader = new(FilePath);
+                    AnschriftenListe = new(loader.GetFirmenAnschriftModels());
+                    RaisPropertyChanged(nameof(AnschriftenListe));
+                }
+            });
         }
+
+
+
+
+        private FirmenAnschriftModel _selectedModel;
+
+        public FirmenAnschriftModel SelectedModel
+        {
+            get => _selectedModel;
+            set
+            {
+                if (value != _selectedModel)
+                {
+                    _selectedModel = value;
+                    RaisPropertyChanged();
+                }
+            }
+        }
+
+
 
         private static BriefKopfViewModel _instance;
 
@@ -55,7 +80,7 @@ namespace AnschreibenCreator.WPF.ViewModel
             {
                 if (value != _Anschriftenlist)
                 {
-                    AnschriftenListe = value;
+                    _Anschriftenlist = value;
                     RaisPropertyChanged();
                 }
             }

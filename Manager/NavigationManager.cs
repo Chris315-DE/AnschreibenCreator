@@ -1,4 +1,4 @@
-﻿using AnschreibenCreator.WPF.Contracts;
+﻿using AnschreibenCreator.Lib.Contracts;
 using CkWPF.Base.MvvmBase;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace AnschreibenCreator.WPF.Manager
+namespace AnschreibenCreator.Lib.Manager
 {
     public class NavigationManager : IPageNavigator, INotifyPropertyChanged
     {

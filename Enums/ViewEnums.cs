@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnschreibenCreator.WPF.Enums
+namespace AnschreibenCreator.Lib.Enums
 {
     public enum ViewEnums
     {

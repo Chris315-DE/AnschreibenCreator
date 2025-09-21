@@ -1,9 +1,9 @@
-﻿using AnschreibenCreator.WPF.ViewModel;
+﻿using AnschreibenCreator.Lib.ViewModel;
 using System.Configuration;
 using System.Data;
 using System.Windows;
 
-namespace AnschreibenCreator.WPF
+namespace AnschreibenCreator.Lib
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace AnschreibenCreator.WPF.Contracts
+namespace AnschreibenCreator.Lib.Contracts
 {
     public interface IPageNavigator
     {

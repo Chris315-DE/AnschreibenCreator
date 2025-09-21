@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AnschreibenCreator.WPF.View
+namespace AnschreibenCreator.Lib.View
 {
     /// <summary>
     /// Interaktionslogik für BriefKopfView.xaml

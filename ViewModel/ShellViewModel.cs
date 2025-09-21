@@ -1,6 +1,6 @@
-﻿using AnschreibenCreator.WPF.Commands;
-using AnschreibenCreator.WPF.Contracts;
-using AnschreibenCreator.WPF.Manager;
+﻿using AnschreibenCreator.Lib.Commands;
+using AnschreibenCreator.Lib.Contracts;
+using AnschreibenCreator.Lib.Manager;
 using CkWPF.Base.MvvmBase;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace AnschreibenCreator.WPF.ViewModel
+namespace AnschreibenCreator.Lib.ViewModel
 {
     public class ShellViewModel : BaseViewModel
     {
