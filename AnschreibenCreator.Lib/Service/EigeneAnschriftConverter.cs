@@ -14,10 +14,15 @@ namespace AnschreibenCreator.Lib.Service
         public EigeneAnschriftConverter(string rawAnschrift)
         {
             _rawAnschrift = rawAnschrift;
+            GetAnschrift();
         }
+
+
+        public bool CanConvert { get; set; }
 
         public EigeneAnschriftModel GetAnschrift()
         {
+            CanConvert = false;
             EigeneAnschriftModel model = new();
 
             var parts = _rawAnschrift.Split("\n", StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
@@ -29,6 +34,8 @@ namespace AnschreibenCreator.Lib.Service
                 model.PlzUStadt = parts[2];
                 model.Mobile = parts[3];
                 model.Email = parts[4];
+
+                CanConvert = true;
             }
 
 

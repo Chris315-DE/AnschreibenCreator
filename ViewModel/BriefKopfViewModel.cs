@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Animation;
 
 
@@ -40,7 +41,11 @@ namespace AnschreibenCreator.Lib.ViewModel
 
             });
         }
+        
 
+        public delegate MessageBoxResult OpenMessageBoxHandler(string titel, string text);
+
+        public OpenMessageBoxHandler OpenMessageBox { get; set; }
 
 
         private string _EigeneAnschriftRaw;
@@ -55,9 +60,29 @@ namespace AnschreibenCreator.Lib.ViewModel
                     _EigeneAnschriftRaw = value;
 
                     EigeneAnschriftConverter conv = new(_EigeneAnschriftRaw);
-                    EigeneAnschrift = conv.GetAnschrift();
+                   
+                    
+                    if (!conv.CanConvert)
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.AppendLine("[Name]")
+                            .AppendLine("[Straße]")
+                            .AppendLine("[PLZ u Stadt]")
+                            .AppendLine("[Mobile]")
+                            .AppendLine("[Mail]");
 
-                    RaisPropertyChanged();
+
+                        OpenMessageBox("Falsches Format!", sb.ToString());
+                    }
+                    else
+                    {
+
+
+                     EigeneAnschrift = conv.GetAnschrift();
+
+                       
+                     RaisPropertyChanged();
+                    }
 
                 }
             }
