@@ -30,7 +30,7 @@ namespace AnschreibenCreator.Lib.Service
 
             foreach (var firma in splittet)
             {
-                var parts = firma.Split("\n",StringSplitOptions.RemoveEmptyEntries|StringSplitOptions.RemoveEmptyEntries);
+                var parts = firma.Split("\n",StringSplitOptions.RemoveEmptyEntries|StringSplitOptions.TrimEntries);
 
                 if(parts.Length == 3)
                 {
@@ -38,8 +38,13 @@ namespace AnschreibenCreator.Lib.Service
                     {
                         FirmenName = parts[0],
                         Straße = parts[1],
-                        PlzUStadt = parts[2]
+                        PlzUStadt = parts[2],
+                        ZuHänden = "Personal Abteilung",
+                      
+                        AnredeGeschlecht = "Damen und Herren"
+
                     };
+
                         
                     results.Add(model);
                 }
@@ -51,7 +56,12 @@ namespace AnschreibenCreator.Lib.Service
                         FirmenName = parts[0],
                         ZuHänden = parts[1],
                         Straße = parts[2],
-                        PlzUStadt = parts[3]
+                        PlzUStadt = parts[3],
+                        
+
+
+                        
+
                     };
 
                     results.Add(model);

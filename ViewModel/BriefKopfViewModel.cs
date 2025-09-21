@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Animation;
 
 
 namespace AnschreibenCreator.Lib.ViewModel
@@ -26,9 +27,57 @@ namespace AnschreibenCreator.Lib.ViewModel
                     RaisPropertyChanged(nameof(AnschriftenListe));
                 }
             });
+
+            AnredeCommand = new(o =>
+            {
+                var para = o as string;
+
+                if (SelectedModel != null)
+                {
+                    SelectedModel.AnredeGeschlecht = para;
+                    RaisPropertyChanged(nameof(SelectedModel));
+                }
+
+            });
         }
 
 
+
+        private string _EigeneAnschriftRaw;
+
+        public string EigeneAnschriftRaw
+        {
+            get => _EigeneAnschriftRaw;
+            set
+            {
+                if (value != _EigeneAnschriftRaw)
+                {
+                    _EigeneAnschriftRaw = value;
+
+                    EigeneAnschriftConverter conv = new(_EigeneAnschriftRaw);
+                    EigeneAnschrift = conv.GetAnschrift();
+
+                    RaisPropertyChanged();
+
+                }
+            }
+        }
+
+
+        private EigeneAnschriftModel _eigeneAnschrift;
+
+        public EigeneAnschriftModel EigeneAnschrift
+        {
+            get => _eigeneAnschrift;
+            set
+            {
+                if (value != _eigeneAnschrift)
+                {
+                    _eigeneAnschrift = value;
+                    RaisPropertyChanged();
+                }
+            }
+        }
 
 
         private FirmenAnschriftModel _selectedModel;
@@ -89,7 +138,7 @@ namespace AnschreibenCreator.Lib.ViewModel
 
         public DelegateCommand LoadFileCommand { get; set; }
 
-
+        public DelegateCommand AnredeCommand { get; set; }
 
         private void LoadFile()
         {

@@ -46,7 +46,7 @@
             </Grid>
 
 
-            <ListView SelectedItem="{Binding SelectedModel}" BorderThickness="0" Background="{StaticResource DarkThemeBackgroundBrush-a20}" ItemsSource="{Binding AnschriftenListe}" Grid.Column="0" Grid.Row="1" >
+            <ListView SelectedItem="{Binding SelectedModel}" d:MinHeight="300" BorderThickness="0" Background="{StaticResource DarkThemeBackgroundBrush-a20}" ItemsSource="{Binding AnschriftenListe}" Grid.Column="0" Grid.Row="1" >
 
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -63,9 +63,99 @@
 
             </ListView>
 
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="Firma :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Grid.Row="1" Content="Zu Händen :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Grid.Row="2" Content="Straße :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Grid.Row="3" Content="Plz + Stadt :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Grid.Row="4" Content="Anrede Geschlecht :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Grid.Row="5" Content="Anrede:" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+
+
+
+                <Label Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" Content="{Binding SelectedModel.FirmenName}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" Content="{Binding SelectedModel.ZuHänden}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Margin="10,0,0,0" Grid.Row="2" Grid.Column="1" Content="{Binding SelectedModel.Straße}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Margin="10,0,0,0" Grid.Row="3" Grid.Column="1" Content="{Binding SelectedModel.PlzUStadt}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Margin="10,0,0,0" Grid.Row="4" Grid.Column="1" Content="{Binding SelectedModel.AnredeGeschlecht}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+                <Label Margin="10,0,0,0" Grid.Row="5" Grid.Column="1" Content="{Binding SelectedModel.AnredeText}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Background="Transparent" FontSize="15"/>
+
+            </Grid>
 
         </Grid>
 
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Style="{StaticResource CkButton}" Command="{Binding AnredeCommand}" CommandParameter="Frau"  Foreground="{StaticResource DarkThemeBackgroundBrush-a10}" Background="{StaticResource DarKThemeGUIElementBrush-a10}" Content="Frau" Height="50" Width="200" Margin="10" FontSize="20" />
+            <Button Grid.Column="1" Style="{StaticResource CkButton}" Command="{Binding AnredeCommand}" CommandParameter="Herr"  Foreground="{StaticResource DarkThemeBackgroundBrush-a10}" Background="{StaticResource DarKThemeGUIElementBrush-a10}" Content="Herr" Height="50" Width="200" Margin="10" FontSize="20" />
+            <Button Grid.Column="2" Style="{StaticResource CkButton}" Command="{Binding AnredeCommand}" CommandParameter="Damen und Herren"  Foreground="{StaticResource DarkThemeBackgroundBrush-a10}" Background="{StaticResource DarKThemeGUIElementBrush-a10}" Content="Damen u Herren" Height="50" Width="200" Margin="10" FontSize="20" />
+           
+
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0" Text="{Binding EigeneAnschriftRaw}" Style="{StaticResource TextBoxPlaxeholder}" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20" Background="{StaticResource DarkThemeBackgroundBrush-a20}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" Tag="Eigene Anschrift" Height="160"/>
+
+            <Grid Grid.Column="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Content="Name :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Straße :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="0" Grid.Row="2" Content="Plz + Stadt :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="Mobile :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="Mail :" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+
+                <Label Grid.Column="1" Grid.Row="0" Content="{Binding EigeneAnschrift.Name}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="1" Grid.Row="1" Content="{Binding EigeneAnschrift.Straße}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="1" Grid.Row="2" Content="{Binding EigeneAnschrift.PlzUStadt}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="1" Grid.Row="3" Content="{Binding EigeneAnschrift.Mobile}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+                <Label Grid.Column="1" Grid.Row="4" Content="{Binding EigeneAnschrift.Email}" Foreground="{StaticResource DarKThemeGUIElementBrush-a10}" FontSize="15"/>
+
+
+            </Grid>
+            
+        </Grid>
+        
 
     </Grid>
 </UserControl>
