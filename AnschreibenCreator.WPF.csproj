@@ -28,10 +28,4 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="AnschreibenCreator.Lib">
-      <HintPath>AnschreibenCreator.Lib\bin\Debug\net9.0\AnschreibenCreator.Lib.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
